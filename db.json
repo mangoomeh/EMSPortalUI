@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "name": "Mango",
+      "salary": 1000,
+      "designation": "Fruit",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,81 @@
+<!-- <div class="container">
+  <h1>Employee Details</h1>
+  <div>First Name: {{ employeeDetails.FirstName }}</div>
+  <div>First Name: {{ employeeDetails.LastName }}</div>
+  <div>Email: {{ employeeDetails.Email }}</div>
+  <div>Address: {{ employeeDetails.Address }}</div>
+  <div>Department: {{ employeeDetails.Designation }}</div>
+  <input formControlName="FirstName" />
+  <input formControlName="LastName" />
+  <input formControlName="Email" />
+  <input formControlName="Mobile" />
+  <input formControlName="Address" />
+  <input formControlName="Designation" />
+  <button (click)="updateEmployeeId(employeeDetails.Id)">Update Details</button>
+</div> -->
+
+<div class="content container-fluid">
+  <div class="page-header d-flex justify-content-between">
+    <div class="page-title">
+      <h3>Profile</h3>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <div class="profile-view">
+        <div class="profile-img-wrap">
+          <div class="profile-img">
+            <a><img alt="" [src]="empData?.ProfileImageUrl" /></a>
+          </div>
+        </div>
+        <div *ngIf="empData" class="profile-basic">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="profile-info-left">
+                <h3 class="user-name m-t-0 mb-0">
+                  {{ empData.FirstName }} {{ empData.LastName }}
+                </h3>
+                <h6 class="text-muted">Department ID : {{ empData.DepartmentId }}</h6>
+                <small class="text-muted">Web Designer</small>
+                <div class="staff-id">Employee ID : {{ empData.Id }}</div>
+                <div class="small doj text-muted">
+                  Date of Join : {{ empData.StartDate | date }}
+                </div>
+                <div class="staff-msg">
+                  <a
+                    routerlink="/layout/apps/chat"
+                    class="btn btn-success"
+                    href="/light/layout/apps/chat"
+                    >Send Message</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <ul class="personal-info">
+                <li>
+                  <div class="title">Phone:</div>
+                  <div class="text">
+                    <a href="">{{ empData.Mobile }}</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="title">Email:</div>
+                  <div class="text">
+                    <a href="">{{ empData.Email }}</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="title">Address:</div>
+                  <div class="text">{{ empData.Address }}</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
